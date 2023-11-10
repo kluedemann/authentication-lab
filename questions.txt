@@ -1,0 +1,20 @@
+1. By default, Django Rest Framework uses session authentication for the browsable API.
+It is managed through Django's session authentication backend.
+Source: https://www.django-rest-framework.org/api-guide/authentication/#sessionauthentication
+
+2. httpie uses HTTP basic auth by default when using the -a option.
+Source: httpie --help
+
+3. In Session Authentication the information is stored on server side, so it is stateful. 
+When using Token auth, the server doesn't need to store anything, so it is stateless.
+Stateless authorization is important because it allows the communication to be RESTful.
+
+4. When you click "Log in with Google" in an OAuth2 flow, the following occurs:
+    1) You are redirected to the authorization provider's (Google) authentication page.
+    2) You enter your account credentials
+    3) If you login successfully, an access token is given to your browser
+    and you are redirected to the content page.
+    4) Your browser includes the access token with subsequent requests 
+    so that you can view authorized content.
+
+5. https://github.com/kluedemann/authentication-lab
